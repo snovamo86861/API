@@ -3,7 +3,12 @@
   {
    "cell_type": "code",
    "execution_count": 1,
-   "metadata": {},
+   "metadata": {
+    "collapsed": true,
+    "jupyter": {
+     "outputs_hidden": true
+    }
+   },
    "outputs": [],
    "source": [
     "import numpy as np\n",
@@ -159,7 +164,12 @@
   {
    "cell_type": "code",
    "execution_count": 5,
-   "metadata": {},
+   "metadata": {
+    "collapsed": true,
+    "jupyter": {
+     "outputs_hidden": true
+    }
+   },
    "outputs": [],
    "source": [
     "#subset your tickers, then pull returns data:\n",
@@ -381,7 +391,12 @@
   {
    "cell_type": "code",
    "execution_count": 8,
-   "metadata": {},
+   "metadata": {
+    "collapsed": true,
+    "jupyter": {
+     "outputs_hidden": true
+    }
+   },
    "outputs": [],
    "source": [
     "# volatility\n",
@@ -393,7 +408,12 @@
   {
    "cell_type": "code",
    "execution_count": 9,
-   "metadata": {},
+   "metadata": {
+    "collapsed": true,
+    "jupyter": {
+     "outputs_hidden": true
+    }
+   },
    "outputs": [],
    "source": [
     "# Save the last day's closing price\n",
@@ -404,7 +424,12 @@
   {
    "cell_type": "code",
    "execution_count": 10,
-   "metadata": {},
+   "metadata": {
+    "collapsed": true,
+    "jupyter": {
+     "outputs_hidden": true
+    }
+   },
    "outputs": [],
    "source": [
     "# Setup the Monte Carlo Parameters\n",
@@ -422,7 +447,7 @@
     "# Run the Monte Carlo Simulation\n",
     "for x in range(number_simulations):\n",
     "    \n",
-    "   \n",
+    "    print(f\"Running Simulation {x}...\")\n",
     "    \n",
     "    # Create the initial simulated prices array seeded with the last closing price\n",
     "    spy_prices = [spy_last_price]\n",
@@ -1106,7 +1131,8 @@
     }
    ],
    "source": [
-    "# Re-calculate the retirement income with a 50% increase in the initial investment amount\n"
+    "# Re-calculate the retirement income with a 50% increase in the initial investment amount\n",
+    ".04 * (1.5 * initial_investment * ending_returns.quantile(.1)).iloc[0]"
    ]
   },
   {
